@@ -1,0 +1,10 @@
+{
+  // TS LINT
+
+  // An additional rules directory
+  "tslint.rulesDirectory": "./node_modules/tslint-microsoft-contrib",
+  // Configure glob patterns of file paths to exclude from linting
+  "tslint.exclude": "node_modules/**/*",
+  "tslint.configFile": "tslint.json",
+  "tslint.autoFixOnSave": true
+}
