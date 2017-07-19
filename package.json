@@ -1,6 +1,6 @@
 {
   "name": "@cashfarm/lang",
-  "version": "0.0.1",
+  "version": "0.6.1",
   "description": "Extends TypeScript/Javascript with basic classes and functions",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -30,8 +30,7 @@
   },
   "homepage": "https://github.com/cashfarm/node-lang#README",
   "dependencies": {
-    "gulp-util": "^3.0.7",
-    "node-uuid": "^1.4.7"
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
     "@types/chai": "^3.4.34",
@@ -47,7 +46,7 @@
     "@types/vinyl": "^1.2.30",
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
-    "gulp-concat-filenames": "^1.1.1",
+    "gulp-concat-filenames": "^1.2.0",
     "gulp-create-tsindex": "^1.0.2",
     "gulp-folders": "^1.1.0",
     "gulp-recursive-folder": "^0.9.4",
@@ -61,6 +60,7 @@
     "source-map-support": "^0.4.2",
     "ts-node": "^1.2.2",
     "ts-package-lint": "^0.2.2",
+    "tslib": "^1.7.1",
     "tslint": "^4.5.1",
     "tslint-microsoft-contrib": "^4.0.1",
     "typescript": "^2.2.2",
