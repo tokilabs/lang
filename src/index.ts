@@ -1,4 +1,5 @@
 export * from './decimal';
+export * from './delay';
 export * from './enums';
 export * from './extendedObject';
 export * from './guid';

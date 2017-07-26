@@ -12,13 +12,23 @@ export function isPresent(value: any): boolean {
 }
 
 /**
- * Checks if `value` is either undefined or null
+ * Checks if `value` is undefined, null or an empty string
  * @export
  * @param {*} value
- * @returns {boolean} `true` if `value` is undefined or null
+ * @returns {boolean} `true` if `value` is undefined, null or empty
  */
 export function isBlank(value: any): boolean {
-  return value === undefined || value === null;
+  return isEmpty(value);
+}
+
+/**
+ * Checks if `value` is undefined, null or an empty string
+ * @export
+ * @param {*} value
+ * @returns {boolean} `true` if `value` is undefined, null or empty
+ */
+export function isEmpty(value: any): boolean {
+  return value === undefined || value === null || value == '';
 }
 
 /**
