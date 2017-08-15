@@ -11,10 +11,9 @@ export type Expression<TObj, TKey> = (value: TObj) => TKey;
  *
  * @stable
  */
-export var Type = Function;
+export const Type = Function;
 
-
-export interface Type extends Function {};
+export interface Type extends Function {}
 
 /**
  * Runtime representation of a type that is constructable (non-abstract).
@@ -22,3 +21,10 @@ export interface Type extends Function {};
 export interface ConcreteType<T> extends Type {
   new (...args: any[]): T;
 }
+
+/**
+ * Represents a serialized version of another type
+ */
+export type Serialized<T> = {
+  [P in keyof T]: T[P];
+};

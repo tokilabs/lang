@@ -1,4 +1,4 @@
-import { v4 } from 'node-uuid';
+import { v4 } from 'uuid';
 
 /**
  * Guid class
@@ -16,6 +16,7 @@ export class Guid {
     if (guid) {
       if (!Guid.isValidGuid(guid))
         throw new Error('Invalid guid value supplied');
+
       this.value = guid;
     }
     else {
