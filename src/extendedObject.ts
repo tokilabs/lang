@@ -1,13 +1,10 @@
-const SERIALIZE_MAP = Symbol('[SERIALIZE_MAP]');
+import { SERIALIZE_MAP } from './symbols';
 
 /**
- * ExtendedObject class
+ * ## ExtendedObject
  *
  * Adds useful methods on top of the Object class
- *
- * @export
- * @class ExtendedObject
- * @extends {Object}
+ * @deprecated Main reason for this class was to allow controlled serialization. Use class-transformer package instead
  */
 export class ExtendedObject extends Object {
 
@@ -52,7 +49,7 @@ export class ExtendedObject extends Object {
  * Marks a property for serialization.
  * Note: To use this decorator the class must extend `ExtendedObject`.
  *
- * @export
+ * @deprecated Use class-transformer package instead
  * @returns {(target: any, propertyKey: string, descriptor: PropertyDescriptor) => void}
  */
 export function serialize(): (target: ExtendedObject, propertyKey: string, descriptor: PropertyDescriptor) => void {
@@ -68,7 +65,7 @@ export function serialize(): (target: ExtendedObject, propertyKey: string, descr
  * Ovewrites the name of the serialized property.
  * Note: To use this decorator the class must extend `ExtendedObject`.
  *
- * @export
+ * @deprecated Use class-transformer package instead
  * @param {string} name
  * @returns {(target: any, propertyKey: string) => void}
  */
@@ -84,7 +81,8 @@ export function serializeAs(name: string): (target: ExtendedObject, propertyKey:
  *
  * Hides a property from serialization.
  * Note: To use this decorator the class must extend `ExtendedObject`.
- * @export
+ *
+ * @deprecated Use class-transformer package instead
  * @returns {(target: any, propertyKey: string) => void}
  */
 export function hide(): (target: ExtendedObject, propertyKey: string) => void {

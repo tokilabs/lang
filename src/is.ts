@@ -1,5 +1,3 @@
-// tslint:disable:no-any
-
 /**
  * Checks if `value` is defined and has a value other than null.
  *
@@ -28,7 +26,7 @@ export function isBlank(value: any): boolean {
  * @returns {boolean} `true` if `value` is undefined, null or empty
  */
 export function isEmpty(value: any): boolean {
-  return value === undefined || value === null || value == '';
+  return value === undefined || value === null || value === '';
 }
 
 /**

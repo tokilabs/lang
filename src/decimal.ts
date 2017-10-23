@@ -1,15 +1,18 @@
+import { FQN } from './symbols';
+import { NumberWrapper } from './primitiveWrappers';
+
 /**
- * Decimal class
+ * ## Decimal
  *
  * Represents a decimal number with a fixed precision which can be defined in the constructor.
- *
- * @export
- * @class Decimal
- * @extends {Number}
- * @implements {Number}
  */
-export class Decimal extends Number implements Number {
+export class Decimal extends NumberWrapper {
+
   public precision: number;
+
+  get primitiveValue(): number {
+    return parseFloat(this.toFixed(this.precision));
+  }
 
   /**
    * Creates an instance of Decimal.
@@ -27,29 +30,13 @@ export class Decimal extends Number implements Number {
       throw new Error('Decimal constructor requires a number or the string representation of a number.');
     }
 
-    super(parseFloat((value ? value : 0).toFixed(2)));
+    super(parseFloat((value ? value : 0).toFixed(precision)));
     this.precision = precision;
   }
 
-  /**
-   * Returns the value of this instance as a number
-   *
-   * @returns {number}
-   *
-   * @memberOf Decimal
-   */
-  public valueOf(): number {
-    return parseFloat(this.toFixed(2));
-  }
-
-  /**
-   * Returns the string representation for this instance.
-   *
-   * @returns {string}
-   *
-   * @memberOf Decimal
-   */
-  public toString(): string {
-    return this.toFixed(2);
+  public toString() {
+    return this.toFixed(this.precision);
   }
 }
+
+Decimal[FQN] = '@cashfarm/lang:Decimal';

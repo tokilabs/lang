@@ -10,7 +10,13 @@
     "sourceMap": false,
     "suppressImplicitAnyIndexErrors": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "rootDir": ".",
+    "outDir": "compiled",
+    "baseUrl": ".",
+    "paths": {
+      "@cashfarm/lang": ["../lib"]
+    }
   },
   "exclude": [
     "node_modules",

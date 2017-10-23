@@ -1,10 +1,9 @@
 /**
- * A Enum to represent ordering direction
+ * ## OrderDirection
  *
- * @export
- * @enum {number}
+ * An enum to represent ordering direction
  */
 export enum OrderDirection {
-  Asc = 1,
-  Desc = -1
+  Asc = 'ASC',
+  Desc = 'DESC'
 }

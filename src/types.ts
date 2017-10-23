@@ -4,20 +4,21 @@
 export type Expression<TObj, TKey> = (value: TObj) => TKey;
 
 /**
- * Runtime representation a type that a Component or other object is instances of.
+ * Represents a type that an object can be instance of.
  *
  * An example of a `Type` is `MyCustomComponent` class, which in JavaScript is be represented by
  * the `MyCustomComponent` constructor function.
  *
  * @stable
  */
-export const Type = Function;
-
+// tslint:disable-next-line:interface-name no-empty-interface
 export interface Type extends Function {}
 
 /**
- * Runtime representation of a type that is constructable (non-abstract).
+ * Represents a type that is constructable (non-abstract).
  */
+
+// tslint:disable-next-line:interface-name
 export interface ConcreteType<T> extends Type {
   new (...args: any[]): T;
 }
@@ -28,3 +29,8 @@ export interface ConcreteType<T> extends Type {
 export type Serialized<T> = {
   [P in keyof T]: T[P];
 };
+
+/**
+ * Represents a constructor for objects of type T
+ */
+export type Constructor<T = {}> = new(...args: any[]) => T;

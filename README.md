@@ -6,3 +6,24 @@ Languages are awesome! Well... most of them are. And that's the case for TypeScr
 Sometimes there are a couple things we miss though...
 
 And, when that happens, instead of complaining about it, we create a lang package :)
+
+Check the API documentation at http://cashfarm.github.io/lang
+
+## Changelog
+
+### v0.7
+
+- Add FQN support (parseFQN() and requireByFQN())
+- Add StringWrapper and NumberWrapper classes for easy primitive subclassing
+- Add Exception class which properly extends native Error
+- Add Constructor<T> type
+- Add tests for Decimal, FQN and Guid
+- Improve code documentation and add API documentation
+- Refactor Decimal and Guid classes to extend wrappers
+- Deprecated ExtendedObject and serialization decorators
+
+#### Breaking Changes
+
+- OrderDirection enum values are now 'ASC' and 'DESC' (previously 1 and -1 respectivelly)
+- Removed IEnumerable and Iterator interfaces
+- Sortable class is now a mixin
