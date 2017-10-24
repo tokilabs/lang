@@ -1,4 +1,5 @@
 import { SERIALIZE_MAP } from './symbols';
+import { Symbols } from './symbols';
 
 /**
  * ## ExtendedObject
@@ -13,7 +14,7 @@ export class ExtendedObject extends Object {
   }
 
   public toJSON(): object {
-    const props: object = this.constructor[SERIALIZE_MAP] || {};
+    const props: object = this.constructor[Symbols.SERIALIZE_MAP] || {};
 
     if (typeof props !== 'object' || Object.keys(props).length === 0) {
       return this;
@@ -54,8 +55,8 @@ export class ExtendedObject extends Object {
  */
 export function serialize(): (target: ExtendedObject, propertyKey: string, descriptor: PropertyDescriptor) => void {
   return (target: ExtendedObject, propertyKey: string, descriptor: PropertyDescriptor): void => {
-    target[SERIALIZE_MAP] = target[SERIALIZE_MAP] || {};
-    target[SERIALIZE_MAP][propertyKey] = propertyKey;
+    target[Symbols.SERIALIZE_MAP] = target[Symbols.SERIALIZE_MAP] || {};
+    target[Symbols.SERIALIZE_MAP][propertyKey] = propertyKey;
   };
 }
 
@@ -71,8 +72,8 @@ export function serialize(): (target: ExtendedObject, propertyKey: string, descr
  */
 export function serializeAs(name: string): (target: ExtendedObject, propertyKey: string) => void {
   return (target: ExtendedObject, propertyKey: string): void => {
-    target[SERIALIZE_MAP] = target[SERIALIZE_MAP] || {};
-    target[SERIALIZE_MAP][propertyKey] = name;
+    target[Symbols.SERIALIZE_MAP] = target[Symbols.SERIALIZE_MAP] || {};
+    target[Symbols.SERIALIZE_MAP][propertyKey] = name;
   };
 }
 
@@ -87,7 +88,7 @@ export function serializeAs(name: string): (target: ExtendedObject, propertyKey:
  */
 export function hide(): (target: ExtendedObject, propertyKey: string) => void {
   return (target: ExtendedObject, propertyKey: string): void => {
-    target[SERIALIZE_MAP] = target[SERIALIZE_MAP] || {};
-    target[SERIALIZE_MAP][propertyKey] = false;
+    target[Symbols.SERIALIZE_MAP] = target[Symbols.SERIALIZE_MAP] || {};
+    target[Symbols.SERIALIZE_MAP][propertyKey] = false;
   };
 }
