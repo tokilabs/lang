@@ -11,6 +11,12 @@ Check the API documentation at http://cashfarm.github.io/lang
 
 ## Changelog
 
+### v0.7.1
+
+- Add FQN decorator and decorate package's classes
+- Move symbols into Symbols object
+- Add default value ({}) for ConcreteType type parameter
+
 ### v0.7
 
 - Add FQN support (parseFQN() and requireByFQN())
