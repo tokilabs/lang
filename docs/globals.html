@@ -948,11 +948,8 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-type-alias tsd-is-external">
 			<a href="globals.html#serialized" class="tsd-kind-icon">Serialized</a>
 		</li>
-		<li class=" tsd-kind-variable tsd-is-external">
+		<li class=" tsd-kind-function tsd-is-external">
 			<a href="globals.html#fqn" class="tsd-kind-icon">FQN</a>
-		</li>
-		<li class=" tsd-kind-variable tsd-is-external">
-			<a href="globals.html#serialize_map" class="tsd-kind-icon">SERIALIZE_<wbr>MAP</a>
 		</li>
 		<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-external">
 			<a href="globals.html#sortable" class="tsd-kind-icon">Sortable</a>
@@ -1023,6 +1020,9 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-function tsd-is-external">
 			<a href="globals.html#today" class="tsd-kind-icon">today</a>
 		</li>
+		<li class=" tsd-kind-object-literal tsd-is-external">
+			<a href="globals.html#symbols" class="tsd-kind-icon">Symbols</a>
+		</li>
 	</ul>
 </nav>
 <div class="container container-main">
@@ -1032,6 +1032,7 @@ img { max-width: 100%; }
 			<p>Languages are awesome! Well... most of them are. And that&#39;s the case for TypeScript.</p>
 			<p>Sometimes there are a couple things we miss though...</p>
 			<p>And, when that happens, instead of complaining about it, we create a lang package :)</p>
+			<p>Check the API documentation at <a href="http://cashfarm.github.io/lang">http://cashfarm.github.io/lang</a></p>
 			<h2 id="changelog">Changelog</h2>
 			<h3 id="v0-7">v0.7</h3>
 			<ul>
@@ -1089,15 +1090,9 @@ img { max-width: 100%; }
 						</ul>
 					</section>
 					<section class="tsd-index-section tsd-is-external">
-						<h3>Variables</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-variable tsd-is-external"><a href="globals.html#fqn" class="tsd-kind-icon">FQN</a></li>
-							<li class="tsd-kind-variable tsd-is-external"><a href="globals.html#serialize_map" class="tsd-kind-icon">SERIALIZE_<wbr>MAP</a></li>
-						</ul>
-					</section>
-					<section class="tsd-index-section tsd-is-external">
 						<h3>Functions</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#fqn" class="tsd-kind-icon">FQN</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter tsd-is-external"><a href="globals.html#sortable" class="tsd-kind-icon">Sortable</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#delay" class="tsd-kind-icon">delay</a></li>
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#escaperegexp" class="tsd-kind-icon">escape<wbr>Reg<wbr>Exp</a></li>
@@ -1123,6 +1118,12 @@ img { max-width: 100%; }
 							<li class="tsd-kind-function tsd-is-external"><a href="globals.html#today" class="tsd-kind-icon">today</a></li>
 						</ul>
 					</section>
+					<section class="tsd-index-section tsd-is-external">
+						<h3>Object literals</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-object-literal tsd-is-external"><a href="globals.html#symbols" class="tsd-kind-icon">Symbols</a></li>
+						</ul>
+					</section>
 				</div>
 			</section>
 		</section>
@@ -1134,7 +1135,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Constructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/types.ts#L36">types.ts:36</a></li>
+						<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/types.ts#L36">types.ts:36</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1154,7 +1155,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Expression<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/types.ts#L4">types.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/types.ts#L4">types.ts:4</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1190,7 +1191,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Fqn<wbr>Details<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/fqn.ts#L6">fqn.ts:6</a></li>
+						<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/fqn.ts#L14">fqn.ts:14</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1222,7 +1223,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Serialized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/types.ts#L29">types.ts:29</a></li>
+						<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/types.ts#L29">types.ts:29</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1238,42 +1239,30 @@ img { max-width: 100%; }
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Variables</h2>
-			<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-external">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
 				<a name="fqn" class="tsd-anchor"></a>
 				<h3>FQN</h3>
-				<div class="tsd-signature tsd-kind-icon">FQN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol.for(&#x27;@cashfarm/lang.FQN&#x27;)</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/symbols.ts#L6">symbols.ts:6</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<h2 id="fqn-symbol">FQN Symbol</h2>
-					</div>
-					<p>Symbol used to store the FQN of classes</p>
-				</div>
+				<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">FQN<span class="tsd-signature-symbol">(</span>fqn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ClassDecorator</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/fqn.ts#L5">fqn.ts:5</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>fqn: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ClassDecorator</span></h4>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-external">
-				<a name="serialize_map" class="tsd-anchor"></a>
-				<h3>SERIALIZE_<wbr>MAP</h3>
-				<div class="tsd-signature tsd-kind-icon">SERIALIZE_<wbr>MAP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol.for(&#x27;@cashfarm/lang.SERIALIZE_MAP&#x27;)</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/symbols.ts#L13">symbols.ts:13</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<h2 id="serialize_map-symbol">SERIALIZE_MAP Symbol</h2>
-					</div>
-					<p>Used by <a href="classes/extendedobject.html">ExtendedObject</a> to store the serialization map</p>
-				</div>
-			</section>
-		</section>
-		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Functions</h2>
 			<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter tsd-is-external">
 				<a name="sortable" class="tsd-anchor"></a>
 				<h3>Sortable</h3>
@@ -1284,7 +1273,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/sortable.ts#L13">sortable.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/sortable.ts#L13">sortable.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1330,7 +1319,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/delay.ts#L7">delay.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/delay.ts#L7">delay.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1358,7 +1347,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/util.ts#L32">util.ts:32</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/util.ts#L32">util.ts:32</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1388,7 +1377,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/extendedObject.ts#L88">extendedObject.ts:88</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/extendedObject.ts#L90">extendedObject.ts:90</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1438,7 +1427,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L95">is.ts:95</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L95">is.ts:95</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1467,7 +1456,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L18">is.ts:18</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L18">is.ts:18</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1500,7 +1489,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L39">is.ts:39</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L39">is.ts:39</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1532,7 +1521,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L106">is.ts:106</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L106">is.ts:106</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1564,7 +1553,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L28">is.ts:28</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L28">is.ts:28</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1597,7 +1586,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L72">is.ts:72</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L72">is.ts:72</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1626,7 +1615,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L117">is.ts:117</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L117">is.ts:117</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1658,7 +1647,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L50">is.ts:50</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L50">is.ts:50</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1687,7 +1676,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L8">is.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L8">is.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1720,7 +1709,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L128">is.ts:128</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L128">is.ts:128</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1752,7 +1741,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L83">is.ts:83</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L83">is.ts:83</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1781,7 +1770,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/is.ts#L61">is.ts:61</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/is.ts#L61">is.ts:61</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1810,7 +1799,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/util.ts#L12">util.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/util.ts#L12">util.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1880,7 +1869,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/util.ts#L25">util.ts:25</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/util.ts#L25">util.ts:25</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1902,7 +1891,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/fqn.ts#L19">fqn.ts:19</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/fqn.ts#L27">fqn.ts:27</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1930,7 +1919,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/fqn.ts#L41">fqn.ts:41</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/fqn.ts#L49">fqn.ts:49</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1958,7 +1947,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/extendedObject.ts#L55">extendedObject.ts:55</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/extendedObject.ts#L57">extendedObject.ts:57</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2011,7 +2000,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/extendedObject.ts#L72">extendedObject.ts:72</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/extendedObject.ts#L74">extendedObject.ts:74</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2067,7 +2056,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cashfarm/node-lang/blob/b376873/src/today.ts#L6">today.ts:6</a></li>
+								<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/today.ts#L6">today.ts:6</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2078,6 +2067,49 @@ img { max-width: 100%; }
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4>
 					</li>
 				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-external">
+			<h2>Object literals</h2>
+			<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-is-external">
+				<a name="symbols" class="tsd-anchor"></a>
+				<h3>Symbols</h3>
+				<div class="tsd-signature tsd-kind-icon">Symbols<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/symbols.ts#L1">symbols.ts:1</a></li>
+					</ul>
+				</aside>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-external">
+					<a name="symbols.fqn" class="tsd-anchor"></a>
+					<h3>FQN</h3>
+					<div class="tsd-signature tsd-kind-icon">FQN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol.for(&#x27;@cashfarm/lang.FQN&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/symbols.ts#L5">symbols.ts:5</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Symbol used to store the FQN of classes</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-external">
+					<a name="symbols.serialize_map" class="tsd-anchor"></a>
+					<h3>SERIALIZE_<wbr>MAP</h3>
+					<div class="tsd-signature tsd-kind-icon">SERIALIZE_<wbr>MAP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol.for(&#x27;@cashfarm/lang.SERIALIZE_MAP&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cashfarm/lang/blob/6d8f789/src/symbols.ts#L10">symbols.ts:10</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Used by <a href="classes/extendedobject.html">ExtendedObject</a> to store the serialization map</p>
+						</div>
+					</div>
+				</section>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
