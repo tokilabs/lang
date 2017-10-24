@@ -19,7 +19,7 @@ export interface Type extends Function {}
  */
 
 // tslint:disable-next-line:interface-name
-export interface ConcreteType<T> extends Type {
+export interface ConcreteType<T = {}> extends Type {
   new (...args: any[]): T;
 }
 
