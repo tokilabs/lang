@@ -1,4 +1,4 @@
-import { SERIALIZE_MAP } from './symbols';
+import { FQN } from './fqn';
 import { Symbols } from './symbols';
 
 /**
@@ -7,6 +7,7 @@ import { Symbols } from './symbols';
  * Adds useful methods on top of the Object class
  * @deprecated Main reason for this class was to allow controlled serialization. Use class-transformer package instead
  */
+@FQN('@cashfarm/lang.ExtendedObject')
 export class ExtendedObject extends Object {
 
   constructor() {

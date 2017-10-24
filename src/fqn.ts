@@ -1,4 +1,12 @@
 import { isEmpty } from './is';
+import { Type } from './types';
+import { Symbols } from './symbols';
+
+export function FQN(fqn: string): ClassDecorator {
+  return (target: Type) => {
+    target[Symbols.FQN] = fqn;
+  };
+}
 
 /**
  * An object that holds the parts that make up a FQN

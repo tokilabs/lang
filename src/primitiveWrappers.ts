@@ -1,5 +1,7 @@
 import * as util from 'util';
 
+import { FQN } from './fqn';
+
 /**
  * ## NumberWrapper
  *
@@ -8,6 +10,7 @@ import * as util from 'util';
  * @abstract
  * @extends {Number}
  */
+@FQN('@cashfarm/lang:NumberWrapper')
 export abstract class NumberWrapper extends Number {
 
   get [Symbol.toStringTag]() {
@@ -144,6 +147,7 @@ export abstract class NumberWrapper extends Number {
  * @abstract
  * @extends String
  */
+@FQN('@cashfarm/lang:StringWrapper')
 export abstract class StringWrapper extends String {
 
   get [Symbol.toStringTag]() {

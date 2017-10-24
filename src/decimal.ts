@@ -1,4 +1,4 @@
-import { FQN } from './symbols';
+import { FQN } from './fqn';
 import { NumberWrapper } from './primitiveWrappers';
 
 /**
@@ -6,6 +6,7 @@ import { NumberWrapper } from './primitiveWrappers';
  *
  * Represents a decimal number with a fixed precision which can be defined in the constructor.
  */
+@FQN('@cashfarm/lang:Decimal')
 export class Decimal extends NumberWrapper {
 
   public precision: number;
@@ -38,5 +39,3 @@ export class Decimal extends NumberWrapper {
     return this.toFixed(this.precision);
   }
 }
-
-Decimal[FQN] = '@cashfarm/lang:Decimal';
