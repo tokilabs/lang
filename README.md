@@ -11,6 +11,12 @@ Check the API documentation at http://cashfarm.github.io/lang
 
 ## Changelog
 
+### v0.8.0
+
+- [BREAKING CHANGE] Removes the ExtendedObject class
+- New (de)serialization methods: serialize, deserialize, primitify and classify
+- Decorators for controlling serialization
+
 ### v0.7.1
 
 - Add FQN decorator and decorate package's classes
