@@ -12,5 +12,9 @@ export * from './today';
 export * from './types';
 export * from './util';
 
-import * as Symbols from './symbols';
-export { Symbols };
+import * as serialization from './serialization';
+import * as symbols from './symbols';
+export {
+  serialization,
+  symbols
+};

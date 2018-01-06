@@ -11,6 +11,10 @@ Check the API documentation at http://cashfarm.github.io/lang
 
 ## Changelog
 
+### v0.8.1
+
+- Add deserializeArray method for use with JSON array strings
+
 ### v0.8.0
 
 - [BREAKING CHANGE] Removes the ExtendedObject class
@@ -21,7 +25,7 @@ Check the API documentation at http://cashfarm.github.io/lang
 
 - Add FQN decorator and decorate package's classes
 - Move symbols into Symbols object
-- Add default value ({}) for ConcreteType type parameter
+- Add default value (`{}`) for ConcreteType type parameter
 
 ### v0.7
 

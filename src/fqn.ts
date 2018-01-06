@@ -2,6 +2,17 @@ import { isEmpty } from './is';
 import { Type } from './types';
 import { Symbols } from './symbols';
 
+/**
+ * Decorates a class setting its Fully Qualified Name
+ *
+ * An FQN string has the following format: `{package}:{namespace}.{class}`
+ *
+ * Examples:
+ *   - @cashfarm/lang:Decimal
+ *   - @cashfarm/lang:serialization.Expose
+ *
+ * @param fqn The Fully Qualified Name of the class
+ */
 export function FQN(fqn: string): ClassDecorator {
   return (target: Type) => {
     target[Symbols.FQN] = fqn;

@@ -35,9 +35,19 @@ export function serialize<TClass>(instances: TClass | TClass[], options?: ITrans
 }
 
 /**
- * Deserializes given JSON string to an object or an array of objects of the given class.
+ * Deserializes given JSON string to an array of objects of the given class.
  */
-export function deserialize<TClass>(cls: Constructor<TClass>, json: string | object, options?: ITransformationOptions): TClass | TClass[] {
+export function deserializeArray<TClass>(cls: Constructor<TClass>, json: string, options?: ITransformationOptions): TClass[] {
+  return CT.deserializeArray(cls, json, options);
+}
+
+/**
+ * Deserializes given JSON string or primitive object to an object or an array of objects of the given class.
+ */
+export function deserialize<TClass>(cls: Constructor<TClass>, json: string, options?: ITransformationOptions): TClass;
+export function deserialize<TClass>(cls: Constructor<TClass>, json: object, options?: ITransformationOptions): TClass;
+export function deserialize<TClass>(cls: Constructor<TClass>, json: object[], options?: ITransformationOptions): TClass[];
+export function deserialize<TClass>(cls: Constructor<TClass>, json: string | object | object[], options?: ITransformationOptions) {
   if (typeof json === 'string') {
     if (json.trim().startsWith('[')) {
       return CT.deserializeArray(cls, json, options);
