@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TransformationType | @tokilabs/lang</title>
+	<title>ITransformOptions | @tokilabs/lang</title>
 	<meta name="description" content="Documentation for @tokilabs/lang">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2704,61 +2704,139 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-enum">
-			<a href="transformationtype.html" class="tsd-kind-icon">Transformation<wbr>Type</a>
+		<li class=" tsd-kind-enum tsd-parent-kind-namespace">
+			<a href="../enums/serialization.transformationtype.html" class="tsd-kind-icon">Transformation<wbr>Type</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+			<a href="serialization.iexcludeoptions.html" class="tsd-kind-icon">IExclude<wbr>Options</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+			<a href="serialization.iexposeoptions.html" class="tsd-kind-icon">IExpose<wbr>Options</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+			<a href="serialization.itargetmap.html" class="tsd-kind-icon">ITarget<wbr>Map</a>
+		</li>
+		<li class="current tsd-kind-interface tsd-parent-kind-namespace">
+			<a href="serialization.itransformoptions.html" class="tsd-kind-icon">ITransform<wbr>Options</a>
 			<ul>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-					<a href="transformationtype.html#classtoplain" class="tsd-kind-icon">Class<wbr>ToPlain</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="serialization.itransformoptions.html#groups" class="tsd-kind-icon">groups</a>
 				</li>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-					<a href="transformationtype.html#plaintoclass" class="tsd-kind-icon">plain<wbr>ToClass</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="serialization.itransformoptions.html#since" class="tsd-kind-icon">since</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="serialization.itransformoptions.html#until" class="tsd-kind-icon">until</a>
 				</li>
 			</ul>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+			<a href="serialization.itransformationoptions.html" class="tsd-kind-icon">ITransformation<wbr>Options</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+			<a href="serialization.itypeoptions.html" class="tsd-kind-icon">IType<wbr>Options</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+			<a href="../modules/serialization.html#transformfn" class="tsd-kind-icon">Transform<wbr>Fn</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace">
+			<a href="../modules/serialization.html#class" class="tsd-kind-icon">Class</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace">
+			<a href="../modules/serialization.html#classify" class="tsd-kind-icon">Classify</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace">
+			<a href="../modules/serialization.html#exclude" class="tsd-kind-icon">Exclude</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace">
+			<a href="../modules/serialization.html#expose" class="tsd-kind-icon">Expose</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace">
+			<a href="../modules/serialization.html#primitify" class="tsd-kind-icon">Primitify</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace">
+			<a href="../modules/serialization.html#serializeoptions" class="tsd-kind-icon">Serialize<wbr>Options</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace">
+			<a href="../modules/serialization.html#transformclasstoplain" class="tsd-kind-icon">Transform<wbr>Class<wbr>ToPlain</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+			<a href="../modules/serialization.html#classify-1" class="tsd-kind-icon">classify</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+			<a href="../modules/serialization.html#deserialize" class="tsd-kind-icon">deserialize</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+			<a href="../modules/serialization.html#deserializearray" class="tsd-kind-icon">deserialize<wbr>Array</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+			<a href="../modules/serialization.html#hydrate" class="tsd-kind-icon">hydrate</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+			<a href="../modules/serialization.html#hydrateprimitive" class="tsd-kind-icon">hydrate<wbr>Primitive</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+			<a href="../modules/serialization.html#primitify-1" class="tsd-kind-icon">primitify</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+			<a href="../modules/serialization.html#serialize" class="tsd-kind-icon">serialize</a>
 		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<section class="tsd-panel tsd-comment">
-			<div class="tsd-comment tsd-typography">
-				<div class="lead">
-					<p>Enum representing the different transformation types.</p>
-				</div>
-			</div>
+		<section class="tsd-panel tsd-hierarchy">
+			<h3>Hierarchy</h3>
+			<ul class="tsd-hierarchy">
+				<li>
+					<span class="target">ITransformOptions</span>
+				</li>
+			</ul>
 		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section ">
-						<h3>Enumeration members</h3>
+						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="transformationtype.html#classtoplain" class="tsd-kind-icon">Class<wbr>ToPlain</a></li>
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="transformationtype.html#plaintoclass" class="tsd-kind-icon">plain<wbr>ToClass</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="serialization.itransformoptions.html#groups" class="tsd-kind-icon">groups</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="serialization.itransformoptions.html#since" class="tsd-kind-icon">since</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="serialization.itransformoptions.html#until" class="tsd-kind-icon">until</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Enumeration members</h2>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-				<a name="classtoplain" class="tsd-anchor"></a>
-				<h3>Class<wbr>ToPlain</h3>
-				<div class="tsd-signature tsd-kind-icon">Class<wbr>ToPlain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 1</span></div>
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="groups" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> groups</h3>
+				<div class="tsd-signature tsd-kind-icon">groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tokilabs/lang/blob/dfeed07/src/serialization/functions.ts#L10">src/serialization/functions.ts:10</a></li>
+						<li>Defined in <a href="https://github.com/tokilabs/lang/blob/dfeed07/src/serialization/interfaces.ts#L69">src/serialization/interfaces.ts:69</a></li>
 					</ul>
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-				<a name="plaintoclass" class="tsd-anchor"></a>
-				<h3>plain<wbr>ToClass</h3>
-				<div class="tsd-signature tsd-kind-icon">plain<wbr>ToClass<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 0</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="since" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> since</h3>
+				<div class="tsd-signature tsd-kind-icon">since<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tokilabs/lang/blob/dfeed07/src/serialization/functions.ts#L9">src/serialization/functions.ts:9</a></li>
+						<li>Defined in <a href="https://github.com/tokilabs/lang/blob/dfeed07/src/serialization/interfaces.ts#L67">src/serialization/interfaces.ts:67</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="until" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> until</h3>
+				<div class="tsd-signature tsd-kind-icon">until<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tokilabs/lang/blob/dfeed07/src/serialization/interfaces.ts#L68">src/serialization/interfaces.ts:68</a></li>
 					</ul>
 				</aside>
 			</section>
