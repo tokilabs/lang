@@ -1,6 +1,6 @@
 {
 	"name": "@tokilabs/lang",
-	"version": "0.8.5",
+	"version": "1.0.0",
 	"description": "Extends TypeScript/Javascript with basic classes and functions",
 	"main": "lib/index.js",
 	"private": false,
@@ -26,7 +26,18 @@
 		"url": "git+ssh://git@github.com/tokilabs/lang.git"
 	},
 	"keywords": [
-		"shiny"
+		"helpers",
+		"FQN",
+		"serialization",
+		"uuid",
+		"guid",
+		"util",
+		"server",
+		"client",
+		"browser",
+		"decorators",
+		"typescript",
+		"functional"
 	],
 	"author": "Saulo Vallory <saulo@toki.life>",
 	"contributors": [
