@@ -8,8 +8,8 @@ import { Symbols } from "./symbols";
  * An FQN string has the following format: `{package}:{namespace}.{class}`
  *
  * Examples:
- *   - @cashfarm/lang:Decimal
- *   - @cashfarm/lang:serialization.Expose
+ *   - @tokilabs/lang:Decimal
+ *   - @tokilabs/lang:serialization.Expose
  *
  * @param fqn The Fully Qualified Name of the class
  */

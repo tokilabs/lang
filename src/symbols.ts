@@ -2,7 +2,7 @@ export const Symbols = {
 	/**
 	 * Symbol used to store the FQN of classes
 	 */
-	FQN: Symbol.for("@cashfarm/lang.FQN"),
+	FQN: Symbol.for("@tokilabs/lang.FQN"),
 };
 
 export default Symbols;

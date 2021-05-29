@@ -6,7 +6,7 @@ import { NumberWrapper } from "./primitiveWrappers";
  *
  * Represents a decimal number with a fixed precision which can be defined in the constructor.
  */
-@FQN("@cashfarm/lang:Decimal")
+@FQN("@tokilabs/lang:Decimal")
 export class Decimal extends NumberWrapper {
 	public precision: number;
 

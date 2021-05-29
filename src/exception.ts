@@ -10,7 +10,7 @@ import { FQN } from "./fqn";
  * thus making it easier to create custom error classes by just
  * extending the Exception class.
  */
-@FQN("@cashfarm/lang.Exception")
+@FQN("@tokilabs/lang.Exception")
 export class Exception extends Error {
 	constructor(message?: string) {
 		super(message); // 'Error' breaks prototype chain here

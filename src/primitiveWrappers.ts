@@ -10,7 +10,7 @@ import { FQN } from "./fqn";
  * @abstract
  * @extends {Number}
  */
-@FQN("@cashfarm/lang:NumberWrapper")
+@FQN("@tokilabs/lang:NumberWrapper")
 export abstract class NumberWrapper extends Number {
 	get [Symbol.toStringTag]() {
 		console.log("toStringTag", this.constructor.name);
@@ -147,7 +147,7 @@ export abstract class NumberWrapper extends Number {
  * @abstract
  * @extends String
  */
-@FQN("@cashfarm/lang:StringWrapper")
+@FQN("@tokilabs/lang:StringWrapper")
 export abstract class StringWrapper extends String {
 	get [Symbol.toStringTag]() {
 		console.log("toStringTag", this.constructor.name);

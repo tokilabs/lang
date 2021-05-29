@@ -1,4 +1,3 @@
-import { inspect } from "util";
 import { deserialize, deserializeArray } from "./serialization/functions";
 
 class SampleObject {

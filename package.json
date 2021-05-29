@@ -1,40 +1,45 @@
 {
-	"name": "@cashfarm/lang",
-	"version": "0.8.4",
+	"name": "@tokilabs/lang",
+	"version": "0.8.5",
 	"description": "Extends TypeScript/Javascript with basic classes and functions",
 	"main": "lib/index.js",
+	"private": false,
 	"typings": "lib/index.d.ts",
 	"scripts": {
 		"clean": "rimraf ./lib",
-		"docs": "yarn docs:html && opn docs/index.html",
-		"docs:html": "typedoc src/index.ts --excludePrivate --mode file --theme minimal --out docs",
-		"docs:json": "typedoc --mode file --json docs/typedoc.json src/index.ts",
+		"docs": "yarn docs:html",
+		"docs:html": "typedoc src/index.ts  --theme minimal --out docs",
+		"docs:json": "typedoc  --json docs/typedoc.json src/index.ts",
 		"docs:publish": "yarn docs:html && gh-pages -d docs",
-		"lint": "tslint --project ./tsconfig.json -c ./tslint.json",
-		"lint-pkg": "ts-package-lint",
-		"indexes": "",
-		"test": "",
-		"test:watch": "",
+		"lint": "eslint src/**/*.ts",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"cover": "jest --coverage",
 		"tsc": "tsc",
-		"cover": "",
-		"build": "npm run clean && npm run lint && npm run test && npm run tsc && npm run lint-pkg"
+		"build": "yarn clean && yarn lint && yarn test && yarn tsc"
 	},
 	"engines": {
 		"node": ">=14.17.0"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/cashfarm/lang.git"
+		"url": "git+ssh://git@github.com/tokilabs/lang.git"
 	},
 	"keywords": [
 		"shiny"
 	],
-	"author": "Saulo Vallory <saulo@cashfarm.com>",
+	"author": "Saulo Vallory <saulo@toki.life>",
+	"contributors": [
+		{
+			"name": "Yago Fernandes",
+			"email": "yago@toki.life"
+		}
+	],
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/cashfarm/lang/issues"
+		"url": "https://github.com/tokilabs/lang/issues"
 	},
-	"homepage": "https://github.com/cashfarm/lang#README",
+	"homepage": "https://github.com/tokilabs/lang#README",
 	"dependencies": {
 		"class-transformer": "^0.1.8",
 		"nanoid": "^3.1.23",
@@ -45,7 +50,6 @@
 	"devDependencies": {
 		"@types/jest": "^26.0.23",
 		"@types/node": "8",
-		"@types/reflect-metadata": "^0.1.0",
 		"@types/rimraf": "^3.0.0",
 		"@types/source-map-support": "^0.5.3",
 		"@types/uuid": "^8.3.0",
@@ -56,17 +60,17 @@
 		"eslint-plugin-import": "^2.23.3",
 		"eslint-plugin-prettier": "^3.4.0",
 		"gh-pages": "^1.0.0",
-		"jest": "^27.0.2",
-		"opn-cli": "^3.1.0",
+		"jest": "^27.0.3",
 		"prettier": "^2.3.0",
 		"rimraf": "^3.0.2",
 		"source-map-support": "^0.5.19",
+		"ts-jest": "^27.0.1",
 		"ts-node": "^10.0.0",
 		"ts-package-lint": "^0.2.2",
 		"tsconfig-paths": "^2.3.0",
 		"tslib": "^1.7.1",
 		"typedoc": "^0.20.36",
-		"typescript": "^4.3.2",
+		"typescript": "4.2.4",
 		"typings": "^1.3.2"
 	}
 }

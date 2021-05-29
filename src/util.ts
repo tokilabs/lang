@@ -2,7 +2,7 @@ import { OrderDirection } from "./enums";
 import { Expression } from "./types";
 
 /**
- * Creates a compare function based on an Expresion and an OrderDirection
+ * Creates a compare function based on an Expression and an OrderDirection
  *
  * @template T The type of the objects being compared
  * @param {(Expression<T, string | number>)} expr Expression for the property to be compared

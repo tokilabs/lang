@@ -13,6 +13,7 @@
     "node_modules": true
   },
   "cSpell.words": [
-    "primitify"
+    "primitify",
+    "typedoc"
   ]
 }

@@ -10,6 +10,8 @@ typings/
 .gitignore
 gulpfile.js
 gulpfile.ts
+.prettier.rc
+eslintrc.json
 tsconfig.json
 tslint.json
 tslint.vscode.json
