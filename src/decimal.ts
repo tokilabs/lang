@@ -1,41 +1,42 @@
-import { FQN } from './fqn';
-import { NumberWrapper } from './primitiveWrappers';
+import { FQN } from "./fqn";
+import { NumberWrapper } from "./primitiveWrappers";
 
 /**
  * ## Decimal
  *
  * Represents a decimal number with a fixed precision which can be defined in the constructor.
  */
-@FQN('@cashfarm/lang:Decimal')
+@FQN("@cashfarm/lang:Decimal")
 export class Decimal extends NumberWrapper {
+	public precision: number;
 
-  public precision: number;
+	get primitiveValue(): number {
+		return parseFloat(this.toFixed(this.precision));
+	}
 
-  get primitiveValue(): number {
-    return parseFloat(this.toFixed(this.precision));
-  }
+	/**
+	 * Creates an instance of Decimal.
+	 *
+	 * @param {(number | string)} value
+	 *
+	 * @memberOf Decimal
+	 */
+	constructor(value: number | string, precision: number = 2) {
+		if (typeof value === "string") {
+			value = parseFloat(value);
+		}
 
-  /**
-   * Creates an instance of Decimal.
-   *
-   * @param {(number | string)} value
-   *
-   * @memberOf Decimal
-   */
-  constructor(value: number | string, precision: number = 2) {
-    if (typeof value === 'string') {
-      value = parseFloat(value);
-    }
+		if (typeof value !== "number" || isNaN(value)) {
+			throw new Error(
+				"Decimal constructor requires a number or the string representation of a number."
+			);
+		}
 
-    if (typeof value !== 'number' || isNaN(value)) {
-      throw new Error('Decimal constructor requires a number or the string representation of a number.');
-    }
+		super(parseFloat((value ? value : 0).toFixed(precision)));
+		this.precision = precision;
+	}
 
-    super(parseFloat((value ? value : 0).toFixed(precision)));
-    this.precision = precision;
-  }
-
-  public toString() {
-    return this.toFixed(this.precision);
-  }
+	public toString() {
+		return this.toFixed(this.precision);
+	}
 }

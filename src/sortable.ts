@@ -1,7 +1,7 @@
-import { Constructor } from './types';
-import { OrderDirection } from './enums';
-import { Expression } from './types';
-import { makeCompareFn } from './util';
+import { Constructor } from "./types";
+import { OrderDirection } from "./enums";
+import { Expression } from "./types";
+import { makeCompareFn } from "./util";
 
 /**
  * ## Sortable
@@ -10,14 +10,19 @@ import { makeCompareFn } from './util';
  *
  * @template TBase The type of class being mixed
  */
-export function Sortable<TBase extends Constructor<TItem[]>, TItem>(Base: TBase) {
-  return class extends Base {
-    public byProperty(prop: string | Expression<TItem, string | number>, order: OrderDirection = OrderDirection.Asc) {
-      const expr = typeof prop === 'string' ? () => this[prop] : prop;
+export function Sortable<TBase extends Constructor<TItem[]>, TItem>(
+	Base: TBase
+) {
+	return class extends Base {
+		public byProperty(
+			prop: string | Expression<TItem, string | number>,
+			order: OrderDirection = OrderDirection.Asc
+		) {
+			const expr = typeof prop === "string" ? () => this[prop] : prop;
 
-      this.sort(makeCompareFn(expr, order));
+			this.sort(makeCompareFn(expr, order));
 
-      return this;
-    }
-  };
+			return this;
+		}
+	};
 }

@@ -1,11 +1,13 @@
-import * as CT from 'class-transformer';
-import * as IF from './interfaces';
+import * as CT from "class-transformer";
+import * as IF from "./interfaces";
 
 /**
  * Transform the object from class to plain object and return only with the exposed properties.
  */
-export function SerializeOptions(options?: IF.ITransformationOptions): Function {
-  return TransformClassToPlain(options);
+export function SerializeOptions(
+	options?: IF.ITransformationOptions
+): Function {
+	return TransformClassToPlain(options);
 }
 
 /**
@@ -15,12 +17,17 @@ export function SerializeOptions(options?: IF.ITransformationOptions): Function 
  *
  * @decorator
  */
-export function Class(typeFunction?: (type?: CT.TypeOptions) => Function):
-        (target: any, key: string | symbol, parameterIndex?: number) => void {
-  return CT.Type(typeFunction);
+export function Class(
+	typeFunction?: (type?: CT.TypeOptions) => Function
+): (target: any, key: string | symbol, parameterIndex?: number) => void {
+	return CT.Type(typeFunction);
 }
 
-export type TransformFn = (value: any, obj: any, transformationType: CT.TransformationType) => any;
+export type TransformFn = (
+	value: any,
+	obj: any,
+	transformationType: CT.TransformationType
+) => any;
 
 /**
  * Defines custom transformation logic when converting from a primitive to a class
@@ -28,10 +35,13 @@ export type TransformFn = (value: any, obj: any, transformationType: CT.Transfor
  * @param transformFn The function used to perform the transformation
  * @param options Transformation options
  */
-export function Classify(transformFn: TransformFn, options?: IF.ITransformOptions): (target: any, key: string) => void {
-  options = Object.assign(options || {}, { toPlainOnly: true });
+export function Classify(
+	transformFn: TransformFn,
+	options?: IF.ITransformOptions
+): (target: any, key: string) => void {
+	options = Object.assign(options || {}, { toPlainOnly: true });
 
-  return CT.Transform(transformFn, options);
+	return CT.Transform(transformFn, options);
 }
 
 /**
@@ -40,10 +50,13 @@ export function Classify(transformFn: TransformFn, options?: IF.ITransformOption
  * @param transformFn The function used to perform the transformation
  * @param options Transformation options
  */
-export function Primitify(transformFn: TransformFn, options?: IF.ITransformOptions): (target: any, key: string) => void {
-  options = Object.assign(options || {}, { toPlainOnly: true });
+export function Primitify(
+	transformFn: TransformFn,
+	options?: IF.ITransformOptions
+): (target: any, key: string) => void {
+	options = Object.assign(options || {}, { toPlainOnly: true });
 
-  return CT.Transform(transformFn, options);
+	return CT.Transform(transformFn, options);
 }
 
 /**
@@ -51,8 +64,10 @@ export function Primitify(transformFn: TransformFn, options?: IF.ITransformOptio
  * constructorToPlain and plainToConstructor transformations, however you can specify on which of transformation types
  * you want to skip this property.
  */
-export function Expose(options?: IF.IExposeOptions): (object: Object | Function, propertyName?: string) => void {
-  return CT.Expose(options);
+export function Expose(
+	options?: IF.IExposeOptions
+): (object: Object | Function, propertyName?: string) => void {
+	return CT.Expose(options);
 }
 
 /**
@@ -60,13 +75,17 @@ export function Expose(options?: IF.IExposeOptions): (object: Object | Function,
  * constructorToPlain and plainToConstructor transformations, however you can specify on which of transformation types
  * you want to skip this property.
  */
-export function Exclude(options?: IF.IExcludeOptions): (object: Object | Function, propertyName?: string) => void {
-  return CT.Exclude(options);
+export function Exclude(
+	options?: IF.IExcludeOptions
+): (object: Object | Function, propertyName?: string) => void {
+	return CT.Exclude(options);
 }
 
 /**
  * Transform the object from class to plain object and return only with the exposed properties.
  */
-export function TransformClassToPlain(params?: IF.ITransformationOptions): Function {
-  return CT.TransformClassToPlain(params);
+export function TransformClassToPlain(
+	params?: IF.ITransformationOptions
+): Function {
+	return CT.TransformClassToPlain(params);
 }

@@ -6,7 +6,7 @@
  * @returns {boolean} `true` if value is neither undefined or null; `false` otherwise
  */
 export function isPresent(value: any): boolean {
-  return value !== undefined && value !== null;
+	return value !== undefined && value !== null;
 }
 
 /**
@@ -16,7 +16,7 @@ export function isPresent(value: any): boolean {
  * @returns {boolean} `true` if `value` is undefined, null or empty
  */
 export function isBlank(value: any): boolean {
-  return isEmpty(value);
+	return isEmpty(value);
 }
 
 /**
@@ -26,7 +26,7 @@ export function isBlank(value: any): boolean {
  * @returns {boolean} `true` if `value` is undefined, null or empty
  */
 export function isEmpty(value: any): boolean {
-  return value === undefined || value === null || value === '';
+	return value === undefined || value === null || value === "";
 }
 
 /**
@@ -37,7 +37,7 @@ export function isEmpty(value: any): boolean {
  * @returns {boolean}
  */
 export function isBoolean(value: any): value is boolean {
-  return typeof value === 'boolean';
+	return typeof value === "boolean";
 }
 
 /**
@@ -48,7 +48,7 @@ export function isBoolean(value: any): value is boolean {
  * @returns {boolean}
  */
 export function isNumber(value: any): boolean {
-  return typeof value === 'number';
+	return typeof value === "number";
 }
 
 /**
@@ -59,7 +59,7 @@ export function isNumber(value: any): boolean {
  * @returns {value is String}
  */
 export function isString(value: any): value is string {
-  return typeof value === 'string';
+	return typeof value === "string";
 }
 
 /**
@@ -70,7 +70,7 @@ export function isString(value: any): value is string {
  * @returns {boolean}
  */
 export function isFunction(value: any): value is Function {
-  return typeof value === 'function';
+	return typeof value === "function";
 }
 
 /**
@@ -81,7 +81,7 @@ export function isFunction(value: any): value is Function {
  * @returns {boolean}
  */
 export function isPromise(value: any): value is Promise<any> {
-  return value instanceof Promise;
+	return value instanceof Promise;
 }
 
 /**
@@ -93,7 +93,7 @@ export function isPromise(value: any): value is Promise<any> {
  */
 // tslint:disable-next-line:array-type prefer-array-literal
 export function isArray(value: any): value is Array<any> {
-  return Array.isArray(value);
+	return Array.isArray(value);
 }
 
 /**
@@ -104,7 +104,7 @@ export function isArray(value: any): value is Array<any> {
  * @returns {value is Date}
  */
 export function isDate(value: any): value is Date {
-  return value instanceof Date && !isNaN(value.valueOf());
+	return value instanceof Date && !isNaN(value.valueOf());
 }
 
 /**
@@ -115,7 +115,7 @@ export function isDate(value: any): value is Date {
  * @returns {boolean}
  */
 export function isJsobject(val: any): boolean {
-  return val !== null && (typeof val === 'function' || typeof val === 'object');
+	return val !== null && (typeof val === "function" || typeof val === "object");
 }
 
 /**
@@ -126,5 +126,5 @@ export function isJsobject(val: any): boolean {
  * @returns {boolean}
  */
 export function isPrimitive(value: any): boolean {
-  return !isJsobject(value);
+	return !isJsobject(value);
 }

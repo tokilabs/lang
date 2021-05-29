@@ -1,4 +1,4 @@
-import { FQN } from './fqn';
+import { FQN } from "./fqn";
 
 /**
  * ## Exception
@@ -10,10 +10,10 @@ import { FQN } from './fqn';
  * thus making it easier to create custom error classes by just
  * extending the Exception class.
  */
-@FQN('@cashfarm/lang.Exception')
+@FQN("@cashfarm/lang.Exception")
 export class Exception extends Error {
-  constructor(message?: string) {
-      super(message); // 'Error' breaks prototype chain here
-      Object.setPrototypeOf(this, new.target.prototype); // restore prototype chain
-  }
+	constructor(message?: string) {
+		super(message); // 'Error' breaks prototype chain here
+		Object.setPrototypeOf(this, new.target.prototype); // restore prototype chain
+	}
 }

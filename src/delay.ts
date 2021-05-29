@@ -5,7 +5,7 @@
  * @returns {Promise<void>}
  */
 export async function delay(milliseconds: number): Promise<void> {
-  return new Promise<void>( (resolve: () => void): void => {
-    setTimeout(resolve, milliseconds);
-  });
+	return new Promise<void>((resolve: () => void): void => {
+		setTimeout(resolve, milliseconds);
+	});
 }

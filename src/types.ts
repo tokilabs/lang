@@ -20,17 +20,17 @@ export interface Type extends Function {}
 
 // tslint:disable-next-line:interface-name
 export interface ConcreteType<T = {}> extends Type {
-  new (...args: any[]): T;
+	new (...args: any[]): T;
 }
 
 /**
  * Represents a serialized version of another type
  */
 export type Serialized<T> = {
-  [P in keyof T]: T[P];
+	[P in keyof T]: T[P];
 };
 
 /**
  * Represents a constructor for objects of type T
  */
-export type Constructor<T = {}> = new(...args: any[]) => T;
+export type Constructor<T = {}> = new (...args: any[]) => T;

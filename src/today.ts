@@ -4,7 +4,7 @@
  * @returns {Date}
  */
 export function today(): Date {
-  const now = new Date();
+	const now = new Date();
 
-  return new Date( now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0 );
+	return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0);
 }

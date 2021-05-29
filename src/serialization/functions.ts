@@ -1,18 +1,13 @@
-import * as CT from 'class-transformer';
-import { Constructor } from '../types';
-import {
-  IExcludeOptions,
-  IExposeOptions,
-  ITypeOptions,
-  ITransformationOptions,
-  ITransformOptions } from './interfaces';
+import * as CT from "class-transformer";
+import { Constructor } from "../types";
+import { ITransformationOptions } from "./interfaces";
 
 /**
  * Enum representing the different transformation types.
  */
 export declare enum TransformationType {
-  plainToClass = 0,
-  ClassToPlain = 1
+	plainToClass = 0,
+	ClassToPlain = 1,
 }
 
 /**
@@ -21,7 +16,10 @@ export declare enum TransformationType {
  * @param instance The instance to be serialized
  * @param options Transformation options
  */
-export function serialize<TClass>(instance: TClass, options?: ITransformationOptions): string;
+export function serialize<TClass>(
+	instance: TClass,
+	options?: ITransformationOptions
+): string;
 
 /**
  * Serializes an array of instances to a JSON string.
@@ -29,34 +27,60 @@ export function serialize<TClass>(instance: TClass, options?: ITransformationOpt
  * @param instances The instances to be serialized
  * @param options Transformation options
  */
-export function serialize<TClass>(instances: TClass[], options?: ITransformationOptions): string;
-export function serialize<TClass>(instances: TClass | TClass[], options?: ITransformationOptions): string {
-  return CT.serialize(instances, options);
+export function serialize<TClass>(
+	instances: TClass[],
+	options?: ITransformationOptions
+): string;
+export function serialize<TClass>(
+	instances: TClass | TClass[],
+	options?: ITransformationOptions
+): string {
+	return CT.serialize(instances, options);
 }
 
 /**
  * Deserializes given JSON string to an array of objects of the given class.
  */
-export function deserializeArray<TClass>(cls: Constructor<TClass>, json: string, options?: ITransformationOptions): TClass[] {
-  return CT.deserializeArray(cls, json, options);
+export function deserializeArray<TClass>(
+	cls: Constructor<TClass>,
+	json: string,
+	options?: ITransformationOptions
+): TClass[] {
+	return CT.deserializeArray(cls, json, options);
 }
 
 /**
  * Deserializes given JSON string or primitive object to an object or an array of objects of the given class.
  */
-export function deserialize<TClass>(cls: Constructor<TClass>, json: string, options?: ITransformationOptions): TClass;
-export function deserialize<TClass>(cls: Constructor<TClass>, json: object[], options?: ITransformationOptions): TClass[];
-export function deserialize<TClass>(cls: Constructor<TClass>, json: object, options?: ITransformationOptions): TClass;
-export function deserialize<TClass>(cls: Constructor<TClass>, json: string | object | object[], options?: ITransformationOptions) {
-  if (typeof json === 'string') {
-    if (json.trim().startsWith('[')) {
-      return CT.deserializeArray(cls, json, options);
-    }
+export function deserialize<TClass>(
+	cls: Constructor<TClass>,
+	json: string,
+	options?: ITransformationOptions
+): TClass;
+export function deserialize<TClass>(
+	cls: Constructor<TClass>,
+	json: object[],
+	options?: ITransformationOptions
+): TClass[];
+export function deserialize<TClass>(
+	cls: Constructor<TClass>,
+	json: object,
+	options?: ITransformationOptions
+): TClass;
+export function deserialize<TClass>(
+	cls: Constructor<TClass>,
+	json: string | object | object[],
+	options?: ITransformationOptions
+) {
+	if (typeof json === "string") {
+		if (json.trim().startsWith("[")) {
+			return CT.deserializeArray(cls, json, options);
+		}
 
-    return CT.deserialize(cls, json, options);
-  }
+		return CT.deserialize(cls, json, options);
+	}
 
-  return CT.plainToClass(cls, json, options);
+	return CT.plainToClass(cls, json, options);
 }
 
 /**
@@ -65,8 +89,11 @@ export function deserialize<TClass>(cls: Constructor<TClass>, json: string | obj
  * @param instance An instance of T
  * @param options Transformation options
  */
-export function primitify<TClass>(instance: TClass, options?: ITransformationOptions): Object {
-  return CT.classToPlain(instance, options);
+export function primitify<TClass>(
+	instance: TClass,
+	options?: ITransformationOptions
+): Object {
+	return CT.classToPlain(instance, options);
 }
 
 /**
@@ -75,10 +102,22 @@ export function primitify<TClass>(instance: TClass, options?: ITransformationOpt
  * @param instance An instance of T
  * @param options Transformation options
  */
-export function classify<TClass>(cls: Constructor<TClass>, plain: Object, options?: ITransformationOptions): TClass;
-export function classify<TClass>(cls: Constructor<TClass>, plain: Object[], options?: ITransformationOptions): TClass[];
-export function classify<TClass>(cls: Constructor<TClass>, plain: Object|Object[], options?: ITransformationOptions): TClass | TClass[] {
-  return CT.plainToClass(cls, plain, options);
+export function classify<TClass>(
+	cls: Constructor<TClass>,
+	plain: Object,
+	options?: ITransformationOptions
+): TClass;
+export function classify<TClass>(
+	cls: Constructor<TClass>,
+	plain: Object[],
+	options?: ITransformationOptions
+): TClass[];
+export function classify<TClass>(
+	cls: Constructor<TClass>,
+	plain: Object | Object[],
+	options?: ITransformationOptions
+): TClass | TClass[] {
+	return CT.plainToClass(cls, plain, options);
 }
 
 /**
@@ -88,7 +127,11 @@ export function classify<TClass>(cls: Constructor<TClass>, plain: Object|Object[
  * @param objects An object to get the data from
  * @param options Transformation options
  */
-export function hydrate<TClass>(instance: TClass, objects: Object, options?: ITransformationOptions): TClass;
+export function hydrate<TClass>(
+	instance: TClass,
+	objects: Object,
+	options?: ITransformationOptions
+): TClass;
 
 /**
  * Hydrates many existing instances with data from plain objects
@@ -97,9 +140,17 @@ export function hydrate<TClass>(instance: TClass, objects: Object, options?: ITr
  * @param objects An array of plain objects to get the data from
  * @param options Transformation options
  */
-export function hydrate<TClass>(instances: TClass[], objects: Object[], options?: ITransformationOptions): TClass[];
-export function hydrate<TClass>(instance: TClass|TClass[], plain: Object|Object[], options?: ITransformationOptions): TClass | TClass[] {
-  return CT.plainToClassFromExist(instance, plain, options);
+export function hydrate<TClass>(
+	instances: TClass[],
+	objects: Object[],
+	options?: ITransformationOptions
+): TClass[];
+export function hydrate<TClass>(
+	instance: TClass | TClass[],
+	plain: Object | Object[],
+	options?: ITransformationOptions
+): TClass | TClass[] {
+	return CT.plainToClassFromExist(instance, plain, options);
 }
 
 /**
@@ -109,7 +160,11 @@ export function hydrate<TClass>(instance: TClass|TClass[], plain: Object|Object[
  * @param object An object to fill
  * @param options Transformation options
  */
-export function hydratePrimitive<TClass>(instance: TClass, object: Object, options?: ITransformationOptions): Object;
+export function hydratePrimitive<TClass>(
+	instance: TClass,
+	object: Object,
+	options?: ITransformationOptions
+): Object;
 
 /**
  * Hydrates an existing plain object with data from a class instance
@@ -118,7 +173,16 @@ export function hydratePrimitive<TClass>(instance: TClass, object: Object, optio
  * @param objects An array of objects to fill
  * @param options Transformation options
  */
-export function hydratePrimitive<TClass>(instances: TClass[], objects: Object[], options?: ITransformationOptions): Object[];
-export function hydratePrimitive<TClass>(ins: TClass|TClass[], objs: Object|Object[], options?: ITransformationOptions): Object | Object[] {
-  return CT.classToPlainFromExist(ins, objs, options);
+export function hydratePrimitive<TClass>(
+	instances: TClass[],
+	objects: Object[],
+	options?: ITransformationOptions
+): Object[];
+
+export function hydratePrimitive<TClass>(
+	ins: TClass | TClass[],
+	objects: Object | Object[],
+	options?: ITransformationOptions
+): Object | Object[] {
+	return CT.classToPlainFromExist(ins, objects, options);
 }
