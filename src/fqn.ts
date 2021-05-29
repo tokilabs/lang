@@ -3,7 +3,7 @@ import { Type } from "./types";
 import { Symbols } from "./symbols";
 
 /**
- * Decorates a class setting its Fully Qualified Name
+ * Decorates a class or function with a Fully Qualified Name
  *
  * An FQN string has the following format: `{package}:{namespace}.{class}`
  *
