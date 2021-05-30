@@ -10,6 +10,15 @@ Check the API documentation at http://tokilabs.github.io/lang
 
 ## Changelog
 
+### v1.0.1
+
+- Removes broken mixin Sortable
+- Fixes Guid and NanoGuid exports
+
+### v1.0.0
+
+- Adds NanoGuid class
+
 ### v0.8.1
 
 - Add deserializeArray method for use with JSON array strings

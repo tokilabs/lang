@@ -16,3 +16,4 @@ tsconfig.json
 tslint.json
 tslint.vscode.json
 tsconfig.json
+*.spec.ts

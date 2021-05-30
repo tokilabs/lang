@@ -4,5 +4,3 @@ export const Symbols = {
 	 */
 	FQN: Symbol.for("@tokilabs/lang.FQN"),
 };
-
-export default Symbols;
