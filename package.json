@@ -52,7 +52,7 @@
 	},
 	"homepage": "https://github.com/tokilabs/lang#README",
 	"dependencies": {
-		"class-transformer": "^0.1.8",
+		"class-transformer": "^0.3.1",
 		"nanoid": "^3.1.23",
 		"prettier-eslint": "^12.0.0",
 		"reflect-metadata": "^0.1.13",
