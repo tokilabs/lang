@@ -10,6 +10,10 @@ Check the API documentation at http://tokilabs.github.io/lang
 
 ## Changelog
 
+### v1.0.2
+
+- Updates Class-transformer version from 0.1.8 to 0.3.1
+
 ### v1.0.1
 
 - Removes broken mixin Sortable
