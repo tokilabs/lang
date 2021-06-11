@@ -1,6 +1,9 @@
 import { isEmpty } from "./is";
 import { Type } from "./types";
 import { Symbols } from "./symbols";
+import * as path from "path";
+
+const packagePaths = new Map<string, string>();
 
 /**
  * Decorates a class or function with a Fully Qualified Name
@@ -18,6 +21,23 @@ export function FQN(fqn: string): ClassDecorator {
 		target[Symbols.FQN] = fqn;
 	};
 }
+
+/**
+ * Defines a path to be used to import the package
+ * instead of the requiring the package by name
+ *
+ * @param packageName The package name
+ * @param packageRoot MUST be an absolute path
+ */
+FQN.registerPackagePath = function registerPackagePath(
+	packageName: string,
+	packageRoot: string
+) {
+	if (!path.isAbsolute(packageRoot)) {
+		new Error("packageRoot MUST be absolute");
+	}
+	packagePaths.set(packageName, packageRoot);
+};
 
 /**
  * An object that holds the parts that make up a FQN
@@ -62,13 +82,14 @@ export function parseFQN(fqn: string): FqnDetails {
  */
 export function requireByFQN(fqn: string) {
 	const info = parseFQN(fqn);
+	const pkgPath = packagePaths.get(info.package) || info.package;
 
-	const pkg = require(info.package);
+	const pkg = require(pkgPath);
 	const props = info.propertyPath.split(".");
 	let currLocation = `package ${pkg}`;
 
 	return props.reduce((currNS, currProp, index) => {
-		if (typeof currNS[currProp] === undefined) {
+		if (typeof currNS[currProp] == null) {
 			throw new Error(
 				`Requiring from FQN ${fqn} failed.` +
 					`Property ${currProp} does not exist in ${currLocation}`
