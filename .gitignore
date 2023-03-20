@@ -5,3 +5,5 @@ typings/
 *.log
 *.tgz
 .DS_Store
+.yarn
+.yarnrc

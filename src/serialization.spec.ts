@@ -1,4 +1,4 @@
-import { deserialize, deserializeArray } from "./serialization/functions";
+import { deserialize, deserializeArray } from "@/serialization/functions";
 
 class SampleObject {
 	public name: string;

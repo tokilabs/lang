@@ -1,7 +1,9 @@
-import { isEmpty } from "./is";
-import { Type } from "./types";
-import { Symbols } from "./symbols";
+import { isEmpty } from "@/is";
+import { Type } from "@/types";
+import { Symbols } from "@/symbols";
 import * as path from "path";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 
 const packagePaths = new Map<string, string>();
 
@@ -18,7 +20,7 @@ const packagePaths = new Map<string, string>();
  */
 export function FQN(fqn: string): ClassDecorator {
 	return (target: Type) => {
-		target[Symbols.FQN] = fqn;
+		(target as any)[Symbols.FQN] = fqn;
 	};
 }
 
@@ -83,9 +85,8 @@ export function parseFQN(fqn: string): FqnDetails {
 export function requireByFQN(fqn: string) {
 	const info = parseFQN(fqn);
 	const pkgPath = packagePaths.get(info.package) || info.package;
-
-	const pkg = require(pkgPath);
 	const props = info.propertyPath.split(".");
+	const pkg = require(pkgPath);
 	let currLocation = `package ${pkg}`;
 
 	return props.reduce((currNS, currProp, index) => {

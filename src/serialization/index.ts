@@ -1,3 +1,3 @@
-export * from "./decorators";
-export * from "./functions";
-export * from "./interfaces";
+export * from "./decorators.js";
+export * from "./functions.js";
+export * from "./interfaces.js";

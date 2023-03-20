@@ -1,5 +1,5 @@
-import { FQN } from "./fqn";
-import { NumberWrapper } from "./primitiveWrappers";
+import { FQN } from "@/fqn";
+import { NumberWrapper } from "@/primitiveWrappers";
 
 /**
  * ## Decimal
@@ -21,7 +21,8 @@ export class Decimal extends NumberWrapper {
 	 *
 	 * @memberOf Decimal
 	 */
-	constructor(value: number | string, precision: number = 2) {
+	constructor(value: number | string, precision?: number) {
+		if (!precision) precision = 2;
 		if (typeof value === "string") {
 			value = parseFloat(value);
 		}
@@ -31,7 +32,6 @@ export class Decimal extends NumberWrapper {
 				"Decimal constructor requires a number or the string representation of a number."
 			);
 		}
-
 		super(parseFloat((value ? value : 0).toFixed(precision)));
 		this.precision = precision;
 	}

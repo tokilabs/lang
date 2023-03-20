@@ -1,5 +1,4 @@
-import { FQN } from "./fqn";
-
+import { FQN } from "@/fqn";
 /**
  * ## Exception
  *

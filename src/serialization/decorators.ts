@@ -1,14 +1,14 @@
 import * as CT from "class-transformer";
-import * as IF from "./interfaces";
+import * as IF from "./interfaces.js";
 
 /**
  * Transform the object from class to plain object and return only with the exposed properties.
  */
-export function SerializeOptions(
-	options?: IF.ITransformationOptions
-): Function {
-	return TransformClassToPlain(options);
-}
+// export function SerializeOptions(
+// 	options?: IF.ITransformationOptions
+// ): Function {
+// 	return TransformClassToPlain(options);
+// }
 
 /**
  * ### Class Decorator
@@ -18,7 +18,7 @@ export function SerializeOptions(
  * @decorator
  */
 export function Class(
-	typeFunction?: (type?: CT.TypeOptions) => Function
+	typeFunction?: (type?: CT.TypeHelpOptions) => Function
 ): (target: any, key: string | symbol, parameterIndex?: number) => void {
 	return CT.Type(typeFunction);
 }
@@ -36,10 +36,10 @@ export type TransformFn = (
  * @param options Transformation options
  */
 export function Classify(
-	transformFn: TransformFn,
+	transformFn: (params: CT.TransformFnParams) => any,
 	options?: IF.ITransformOptions
 ): (target: any, key: string) => void {
-	options = Object.assign(options || {}, { toPlainOnly: true });
+	options = Object.assign(options || {}, { toClassOnly: true });
 
 	return CT.Transform(transformFn, options);
 }
@@ -51,7 +51,7 @@ export function Classify(
  * @param options Transformation options
  */
 export function Primitify(
-	transformFn: TransformFn,
+	transformFn: (params: CT.TransformFnParams) => {},
 	options?: IF.ITransformOptions
 ): (target: any, key: string) => void {
 	options = Object.assign(options || {}, { toPlainOnly: true });
@@ -84,8 +84,8 @@ export function Exclude(
 /**
  * Transform the object from class to plain object and return only with the exposed properties.
  */
-export function TransformClassToPlain(
-	params?: IF.ITransformationOptions
-): Function {
-	return CT.TransformClassToPlain(params);
-}
+// export function TransformClassToPlain(
+// 	params?: IF.ITransformationOptions
+// ): Function {
+// 	return CT.TransformClassToPlain(params);
+// }

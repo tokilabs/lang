@@ -1,4 +1,6 @@
-import { parseFQN, requireByFQN } from "./fqn";
+import { parseFQN, requireByFQN } from "@/fqn";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 
 describe("FQN", () => {
 	it("Should throw on FQN missing :", () => {
