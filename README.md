@@ -10,6 +10,10 @@ Check the API documentation at http://tokilabs.github.io/lang
 
 ## Changelog
 
+### v1.0.4
+
+- Update multiple dependencies
+
 ### v1.0.3
 
 - Adds registerPackagePath feature to FQN
