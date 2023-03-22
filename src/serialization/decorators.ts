@@ -60,13 +60,18 @@ export function Primitify(
 }
 
 /**
- * Marks property as included in the process of transformation. By default it includes the property for both
+ * Marks the property as included in the transformation process.
+ * If using a string your option will be "name", for more options use "IExposeOptions".
+ * By default it includes the property for both
  * constructorToPlain and plainToConstructor transformations, however you can specify on which of transformation types
  * you want to skip this property.
  */
 export function Expose(
-	options?: IF.IExposeOptions
+	options?: IF.IExposeOptions | string
 ): (object: Object | Function, propertyName?: string) => void {
+	if (typeof options === "string") {
+		return CT.Expose({ name: options });
+	}
 	return CT.Expose(options);
 }
 
