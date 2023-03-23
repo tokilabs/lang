@@ -9,7 +9,7 @@ const config = {
 		},
 	},
 	moduleNameMapper: {
-		"^@/(.*)$": "<rootDir>/lib/$1",
+		"^@/(.*)$": "<rootDir>/src/$1",
 	},
 };
 

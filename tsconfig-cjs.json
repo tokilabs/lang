@@ -1,19 +1,19 @@
 {
-	"extends": "./config/tsconfig.flexible", // also available: "./config/tsconfig.strict"
 	"compileOnSave": true,
 	"compilerOptions": {
 		"target": "ESNext",
 		"rootDir": "src",
-		"outDir": "lib/mjs",
-		"module": "NodeNext",
-		"moduleResolution": "nodenext",
+		"outDir": "lib/cjs",
+		"module": "CommonJS",
+		"moduleResolution": "node",
 		"baseUrl": ".",
+		"allowJs": true,
+		"strictNullChecks": false,
 		"esModuleInterop": true,
 		"noImplicitAny": true,
 		"removeComments": true,
 		"preserveConstEnums": true,
 		"declaration": true,
-		"sourceMap": true,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"importHelpers": true,
@@ -23,13 +23,13 @@
 		"pretty": true,
 		"paths": {
 			"@lang/*": ["./src/*"],
-			"@tokilabs/lang/*": ["../lib/mjs/*"],
+			"@tokilabs/lang/*": ["../lib/cjs/*"],
 			"@/*": ["./src/*.ts"]
 		},
-		"lib": ["ESNext"],
-		"plugins": [{ "name": "tslint-language-service" }]
+		"lib": ["ESNext"]
 	},
 
 	"include": ["src/**/*"],
-	"exclude": ["src/**/*.spec.ts"]
+	"exclude": ["src/**/*.spec.ts"],
+	"plugins": [{ "name": "tslint-language-service" }]
 }

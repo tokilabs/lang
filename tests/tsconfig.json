@@ -18,12 +18,12 @@
 		"listFiles": true,
 		"traceResolution": true,
 		"paths": {
-			"@lang/*": ["../lib/*"],
-			"@lang/serialization/*": ["../lib/serialization/*"],
-			"@/*": ["../lib/*.js"],
+			"@lang/*": ["../lib/mjs/*"],
+			"@lang/serialization/*": ["../lib/mjs/serialization/*"],
+			"@/*": ["../src/*.ts"],
 			"node_modules/*":["../node_modules/*"],
 			
 		}
 	},
-	"include": ["../**/*.spec.ts"],
+	"include": ["../**/*"],
 }

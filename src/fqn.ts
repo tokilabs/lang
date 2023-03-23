@@ -3,7 +3,6 @@ import { Type } from "@/types";
 import { Symbols } from "@/symbols";
 import * as path from "path";
 import { createRequire } from "module";
-const require = createRequire(import.meta.url);
 
 const packagePaths = new Map<string, string>();
 
@@ -86,6 +85,7 @@ export function requireByFQN(fqn: string) {
 	const info = parseFQN(fqn);
 	const pkgPath = packagePaths.get(info.package) || info.package;
 	const props = info.propertyPath.split(".");
+	require = createRequire(path.resolve(pkgPath));
 	const pkg = require(pkgPath);
 	let currLocation = `package ${pkg}`;
 

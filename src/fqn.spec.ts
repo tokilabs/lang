@@ -1,7 +1,6 @@
 import { parseFQN, requireByFQN } from "@/fqn";
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-
+import * as Event from "events";
+import * as ClassTransformer from "class-transformer";
 describe("FQN", () => {
 	it("Should throw on FQN missing :", () => {
 		expect(() => parseFQN("@tokilabs/lang")).toThrow();
@@ -22,16 +21,14 @@ describe("FQN", () => {
 
 	it("Should import classes correctly", () => {
 		expect(requireByFQN("class-transformer:ClassTransformer")).toEqual(
-			require("class-transformer").ClassTransformer
+			ClassTransformer.ClassTransformer
 		);
-		expect(requireByFQN("events:EventEmitter")).toEqual(
-			require("events").EventEmitter
-		);
+		expect(requireByFQN("events:EventEmitter")).toEqual(Event.EventEmitter);
 	});
 
 	it("Should import functions correctly", () => {
 		expect(requireByFQN("class-transformer:plainToClass")).toEqual(
-			require("class-transformer").plainToClass
+			ClassTransformer.plainToClass
 		);
 	});
 });

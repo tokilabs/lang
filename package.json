@@ -1,10 +1,22 @@
 {
 	"name": "@tokilabs/lang",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Extends TypeScript/Javascript with basic classes and functions",
-	"main": "lib/index.js",
+	"main": "lib/cjs/index.js",
+	"module": "lib/mjs/index.js",
 	"type": "module",
-	"typings": "lib/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./lib/mjs/index.d.ts",
+				"default": "./lib/mjs/index.js"
+			},
+			"require": {
+				"types": "./lib/cjs/index.d.ts",
+				"default": "./lib/cjs/index.js"
+			}
+		}
+	},
 	"scripts": {
 		"clean": "rimraf ./lib",
 		"docs": "yarn docs:html",
@@ -12,11 +24,11 @@
 		"docs:json": "typedoc  --json docs/typedoc.json src/index.ts",
 		"docs:publish": "yarn docs:html && gh-pages -d docs",
 		"lint": "eslint src/**/*.ts",
-		"test": "yarn tsc && yarn node --experimental-vm-modules $(yarn bin jest)",
+		"test": "yarn node --experimental-vm-modules $(yarn bin jest)",
 		"test:watch": "jest --watch",
 		"cover": "jest --coverage",
 		"tsc": "tsc",
-		"build": "yarn clean && yarn lint && yarn tsc && yarn test"
+		"build": "yarn clean && yarn lint && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && ./fixup"
 	},
 	"engines": {
 		"node": ">=18"
