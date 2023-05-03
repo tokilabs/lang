@@ -10,6 +10,10 @@ Check the API documentation at http://tokilabs.github.io/lang
 
 ## Changelog
 
+### v1.0.6
+
+- Add compatibility with Commonjs and ESM
+
 ### v1.0.4
 
 - Update multiple dependencies

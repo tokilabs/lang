@@ -1,4 +1,4 @@
-import { Guid } from "@/guid";
+import { Guid } from "./guid";
 import { inspect } from "util";
 
 describe("Guid", () => {

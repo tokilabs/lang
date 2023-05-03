@@ -1,5 +1,5 @@
-import { OrderDirection } from "./enums.js";
-import { Expression } from "./types.js";
+import { OrderDirection } from "./enums";
+import { Expression } from "./types";
 
 /**
  * Creates a compare function based on an Expression and an OrderDirection

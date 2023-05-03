@@ -21,13 +21,9 @@
 		"listFiles": false,
 		"traceResolution": false,
 		"pretty": true,
-		"paths": {
-			"@lang/*": ["./src/*"],
-			"@tokilabs/lang/*": ["../lib/cjs/*"],
-			"@/*": ["./src/*.ts"]
-		},
 		"lib": ["ESNext"]
 	},
+	
 
 	"include": ["src/**/*"],
 	"exclude": ["src/**/*.spec.ts"],

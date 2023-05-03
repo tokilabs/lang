@@ -1,6 +1,6 @@
-import { isEmpty } from "@/is";
-import { Type } from "@/types";
-import { Symbols } from "@/symbols";
+import { isEmpty } from "./is";
+import { Type } from "./types";
+import { Symbols } from "./symbols";
 import * as path from "path";
 import { createRequire } from "module";
 

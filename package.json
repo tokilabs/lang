@@ -1,6 +1,6 @@
 {
 	"name": "@tokilabs/lang",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Extends TypeScript/Javascript with basic classes and functions",
 	"main": "lib/cjs/index.js",
 	"module": "lib/mjs/index.js",

@@ -6,7 +6,7 @@
 		"rootDir": "src",
 		"outDir": "lib/mjs",
 		"module": "NodeNext",
-		"moduleResolution": "nodenext",
+		"moduleResolution": "node",
 		"baseUrl": ".",
 		"esModuleInterop": true,
 		"noImplicitAny": true,
@@ -20,12 +20,6 @@
 		"inlineSourceMap": false,
 		"listFiles": false,
 		"traceResolution": false,
-		"pretty": true,
-		"paths": {
-			"@lang/*": ["./src/*"],
-			"@tokilabs/lang/*": ["../lib/mjs/*"],
-			"@/*": ["./src/*.ts"]
-		},
 		"lib": ["ESNext"],
 		"plugins": [{ "name": "tslint-language-service" }]
 	},

@@ -1,6 +1,6 @@
 import * as CT from "class-transformer";
-import { Constructor } from "../types.js";
-import { ITransformationOptions } from "./interfaces.js";
+import { Constructor } from "../types";
+import { ITransformationOptions } from "./interfaces";
 
 /**
  * Enum representing the different transformation types.
