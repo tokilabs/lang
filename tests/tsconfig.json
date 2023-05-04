@@ -5,9 +5,10 @@
 		"rootDir": "..",
 		"outDir": "compiled",
 		"module": "NodeNext",
-		"moduleResolution": "node",
+		"moduleResolution": "nodenext",
 		"baseUrl": ".",
 		"esModuleInterop": true,
+		"allowJs": true,
 		"noImplicitAny": true,
 		"removeComments": true,
 		"preserveConstEnums": true,
@@ -25,5 +26,5 @@
 			
 		}
 	},
-	"include": ["../**/*"],
+	"include": ["../**/*.spec.ts", "../**/*.js"],
 }

@@ -1,5 +1,5 @@
 import { inspect } from "util";
-import { NanoGuid } from "./nanoGuid";
+import { NanoGuid } from "../lib/cjs/nanoGuid.js";
 
 describe("Guid", () => {
 	it("Should be an instance of string", () => {

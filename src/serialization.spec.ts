@@ -1,4 +1,7 @@
-import { deserialize, deserializeArray } from "./serialization/functions";
+import {
+	deserialize,
+	deserializeArray,
+} from "../lib/cjs/serialization/functions.js";
 
 class SampleObject {
 	public name: string;

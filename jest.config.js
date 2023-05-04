@@ -1,15 +1,17 @@
 const config = {
 	preset: "ts-jest",
 	testEnvironment: "node",
-	transform: {},
-	extensionsToTreatAsEsm: [".ts"],
-	globals: {
-		"ts-jest": {
-			useESM: true,
-		},
+	transform: {
+		".*.ts": [
+			"ts-jest",
+			{
+				useESM: true,
+			},
+		],
 	},
+	extensionsToTreatAsEsm: [".ts"],
 	moduleNameMapper: {
-		"^@/(.*)$": "<rootDir>/src/$1",
+		"./$1": "<rootDir>/lib/cjs/$1",
 	},
 };
 

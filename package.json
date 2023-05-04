@@ -1,6 +1,6 @@
 {
 	"name": "@tokilabs/lang",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Extends TypeScript/Javascript with basic classes and functions",
 	"main": "lib/cjs/index.js",
 	"module": "lib/mjs/index.js",
@@ -69,7 +69,7 @@
 	"homepage": "https://github.com/tokilabs/lang#README",
 	"dependencies": {
 		"class-transformer": "0.5.1",
-		"nanoid": "^4.0.1",
+		"nanoid": "3.0.1",
 		"prettier-eslint": "^15.0.1",
 		"reflect-metadata": "^0.1.13",
 		"uuid": "^9.0.0"

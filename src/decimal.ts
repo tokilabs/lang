@@ -1,5 +1,5 @@
-import { FQN } from "./fqn";
-import { NumberWrapper } from "./primitiveWrappers";
+import { FQN } from "./fqn.js";
+import { NumberWrapper } from "./primitiveWrappers.js";
 
 /**
  * ## Decimal

@@ -1,6 +1,6 @@
 import { v4 } from "uuid";
-import { StringWrapper } from "./primitiveWrappers";
-import { FQN } from "./fqn";
+import { StringWrapper } from "./primitiveWrappers.js";
+import { FQN } from "./fqn.js";
 
 /**
  * ## Guid

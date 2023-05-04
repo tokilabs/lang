@@ -1,4 +1,4 @@
-import { parseFQN, requireByFQN } from "./fqn";
+import { parseFQN, requireByFQN } from "../lib/cjs/fqn.js";
 import * as Event from "events";
 import * as ClassTransformer from "class-transformer";
 describe("FQN", () => {

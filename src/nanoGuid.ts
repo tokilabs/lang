@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
-import { StringWrapper } from "./primitiveWrappers";
-import { FQN } from "./fqn";
+import { StringWrapper } from "./primitiveWrappers.js";
+import { FQN } from "./fqn.js";
 
 /**
  * ## Guid

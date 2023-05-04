@@ -1,5 +1,5 @@
 import * as CT from "class-transformer";
-import * as IF from "./interfaces";
+import * as IF from "./interfaces.js";
 
 /**
  * Transform the object from class to plain object and return only with the exposed properties.

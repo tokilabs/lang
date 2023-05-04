@@ -1,5 +1,5 @@
 import { inspect } from "util";
-import { Decimal } from "./decimal";
+import { Decimal } from "../lib/cjs/decimal.js";
 
 describe("Decimal", () => {
 	it("Should be an instance of number", () => {

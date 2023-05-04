@@ -1,6 +1,6 @@
 import * as util from "util";
 
-import { FQN } from "./fqn";
+import { FQN } from "./fqn.js";
 
 /**
  * ## NumberWrapper
